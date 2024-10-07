@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análisis de Siembra</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="../css/style-prediccion.css">
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+</head>
+
+
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo-container">
+                <img id="logo" src="../imagenes/logo.jpg" alt="Logo SideralX">
+                <span class="company-name">SideralX</span>
+            </div>
+            <button id="menu-toggle" class="menu-toggle" aria-label="Abrir menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav id="main-nav">
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="prediccion.html">Análisis</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <div class="container">
+            <div class="card">
+                <h2>Mapa de la Zona</h2>
+                <div id="map" style="height: 400px;">Aquí irá el mapa</div>
+            </div>
+            <div class="card">
+                <h2>Controles</h2>
+                <div id="control-buttons">
+                    <button id="analyzeBtn">Analizar el Área</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="results" class="hidden">
+        <div class="card">
+            <h2>Resultados del Análisis</h2>
+            <div id="recommendation"></div>
+            <div id="details"></div>
+        </div>
+    
+        <div class="graph-container">
+            <!-- Gráfica de barras -->
+            <div class="card">
+                <canvas id="graph1"></canvas>
+                <div id="analysisBarChart"></div> <!-- Contenedor para análisis extra de la gráfica de barras -->
+            </div>
+    
+            <!-- Mapa de calor para NDVI -->
+            <div class="card">
+                <canvas id="graph2"></canvas>
+                <div id="analysisHeatmap"></div> <!-- Contenedor para análisis extra del mapa de calor -->
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/prediccion.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-chart-matrix@1.2.0"></script>
+
+</body>
+
+</html>

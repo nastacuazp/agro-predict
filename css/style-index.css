@@ -1,0 +1,249 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #1a1a1a;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #52b454 0%, #52b454 75px, white 400px);
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: auto;
+    padding: 0 20px;
+    position: relative;
+}
+
+.title {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 36px;
+    font-weight: 700;
+    color: #1a1a1a;
+    text-align: center;
+    margin: 0;
+    padding-top: 10px;
+}
+
+header {
+    background: #ffffff;
+    padding: 0.5rem 0;
+    display: flex;
+    height: 75px;
+    width: 100%;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-image {
+    position: relative;
+    width: 100%;
+    height: 120px;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.header-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    margin: 0;
+}
+
+.title-overlay {
+    position: absolute;
+    top: 10%;
+    color: #ffffff;
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 15px;
+    border-radius: 8px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+#logo {
+    width: 60px;
+    height: auto;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+.company-name {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+nav {
+    margin-left: auto;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    padding: 0 10px;
+}
+
+nav a {
+    color: #1a1a1a;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #278029;
+}
+
+nav a[data-active="true"] {
+    color: #278029;
+}
+
+nav a[data-active="true"]:hover {
+    color: #1a1a1a;
+}
+
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0;
+    margin-top: 0;
+}
+
+#main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background: white;
+    padding: 2rem 0;
+    margin-top: 0;
+}
+
+.content {
+    flex: 1;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.content p {
+    margin-top: 2px;
+    font-size: 24px;
+    font-weight: 700;
+    color: #2c3e50;
+}
+
+.button-container {
+    text-align: left;
+    margin-top: 20px;
+}
+
+.prediction-button {
+    background-color: #52b454;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.prediction-button:hover {
+    background-color: #3e8e41;
+}
+
+.justified-text {
+    font-family: 'Open Sans', sans-serif;
+    text-align: justify;
+}
+
+.video-container {
+    flex: 1.5;
+    width: 100%;
+    max-width: 600px;
+    margin-left: -2rem;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    position: relative;
+    right: 100px;
+}
+
+.video-container iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background: #ffffff;
+    padding: 2rem 0;
+    margin-top: 2rem;
+}
+
+.social-icons a {
+    color: #1a1a1a;
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+.resources ul {
+    list-style: none;
+    padding: 0;
+}
+
+.resources ul li {
+    margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    #main {
+        flex-direction: column;
+    }
+
+    .content,
+    .video-container {
+        flex: 1;
+        width: 100%;
+        max-width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 1rem;
+    }
+
+    .video-container {
+        margin-top: 2rem;
+        right: 0;
+    }
+}
